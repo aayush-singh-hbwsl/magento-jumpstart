@@ -8,9 +8,16 @@ use Macademy\Jumpstart\Api\CategoryInterface;
 
 class Product
 {
+    // function __construct(
+    //     private CategoryInterface $category
+    // ) {}
+
+    private Category $category;
     function __construct(
-        private CategoryInterface $category,
-    ) {}
+        Category $category
+    ) { 
+        $this->category = $category;
+    }
 
     function getCategoryName(): string
     {
