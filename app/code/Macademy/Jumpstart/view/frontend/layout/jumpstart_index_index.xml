@@ -3,9 +3,9 @@
     <body>
         <referenceContainer name="content">
             <block name="macademy_jumpstart_welcome" template="Macademy_Jumpstart::welcome.phtml">
-                <!-- <arguments>
+                <arguments>
                     <argument name="welcome_message_view_model" xsi:type="object">Macademy\Jumpstart\ViewModel\WelcomeMessage</argument>
-                </arguments> -->
+                </arguments>
             </block>
         </referenceContainer>
     </body>
