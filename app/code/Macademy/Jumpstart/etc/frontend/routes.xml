@@ -2,14 +2,14 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-   xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"\>
+   xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
 <router id="standard">
 
-   <route frontName="jumpstart" id="jumpstart"\>
+   <route frontName="jumpstart" id="jumpstart">
 
-       <module name="Module_Macademy" \>
+       <module name="Macademy_Jumpstart" />
 
-   </route\>
+   </route>
 </router>
 
 </config>
