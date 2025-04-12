@@ -1,28 +1,33 @@
 <?php
-
-declare(strict_types=1);
-
 namespace Macademy\Jumpstart\Controller\Index;
 
-use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\View\Result\Page;
-use Magento\Framework\View\Result\PageFactory;
-
-class Index implements HttpGetActionInterface
+class Index extends \Magento\Framework\App\Action\Action
 {
+	protected $_pageFactory;
 
-    // public function __construct(
-    //     private PageFactory $pageFactory
-    // ){}
+	protected $_postFactory;
 
-    private PageFactory $pageFactory;
+	public function __construct(
+		\Magento\Framework\App\Action\Context $context,
+		\Magento\Framework\View\Result\PageFactory $pageFactory,
+		\Macademy\Jumpstart\Model\PostFactory $postFactory
+		)
+	{
+		$this->_pageFactory = $pageFactory;
+		$this->_postFactory = $postFactory;
+		return parent::__construct($context);
+	}
 
-    public function __construct(PageFactory $pageFactory)
-    {
-        $this->pageFactory = $pageFactory;
-    }
-
-    public function execute(): Page{
-        return $this->pageFactory->create();
-    }
+	public function execute()
+	{
+		$post = $this->_postFactory->create();
+		$collection = $post->getCollection();
+		foreach($collection as $item){
+			echo "<pre>";
+			print_r($item->getData());
+			echo "</pre>";
+		}
+		exit();
+		return $this->_pageFactory->create();
+	}
 }
