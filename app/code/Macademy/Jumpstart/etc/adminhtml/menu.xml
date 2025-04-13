@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Macademy_Jumpstart::helloworld" title="Hello World" module="Macademy_Jumpstart" sortOrder="51" resource="Macademy_Jumpstart::helloworld"/>
-        <add id="Macademy_Jumpstart::post" title="Manage Posts" module="Macademy_Jumpstart" sortOrder="10" action="mageplaza_helloworld/post" resource="Macademy_Jumpstart::post" parent="Macademy_Jumpstart::helloworld"/>
+        <add id="Macademy_Jumpstart::post" title="Manage Posts" module="Macademy_Jumpstart" sortOrder="10" action="macademy_jumpstart/post" resource="Macademy_Jumpstart::post" parent="Macademy_Jumpstart::helloworld"/>
         <add id="Macademy_Jumpstart::hello_configuration" title="Configuration" module="Macademy_Jumpstart" sortOrder="99" parent="Macademy_Jumpstart::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Macademy_Jumpstart::helloworld_configuration"/>
     </menu>
 </config>
