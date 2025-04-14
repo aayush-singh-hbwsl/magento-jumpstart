@@ -8,8 +8,10 @@
    <route frontName="jumpstart" id="jumpstart">
 
        <module name="Macademy_Jumpstart" />
-
+        
    </route>
+
+   
 </router>
 
 </config>
